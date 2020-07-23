@@ -1,7 +1,7 @@
 public final class Wygrana_O_X {// Klasa przeszukuj¹ca pola w poszukiwaniu zwyciêzcy.
 	
 	private Plansza_O_X plansza;
-	private int przylegle, rozmiar, warunek = 3;
+	private int przylegle, rozmiar, warunek;
 	private char znak;
 
 	public Wygrana_O_X() {

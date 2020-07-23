@@ -11,7 +11,7 @@ public final class GUI_O_X implements ActionListener{// Komponenty interfejsu gr
 	private Component[] KOMPONENTY;
 	private Panel_O_X panel;
 	protected Button res_but,sta_but;
-	private TextField pole_edycji, pole_edycji2;
+	private TextField PED_ilosc_pol, PED_warunek_zwyciestwa;
 	private Label label1, label2;
 	
 	GUI_O_X(Panel_O_X panel){
@@ -26,11 +26,11 @@ public final class GUI_O_X implements ActionListener{// Komponenty interfejsu gr
 		sta_but.setBounds(400 - 95, 15, 90, 20);
 		sta_but.addActionListener(this);
 		
-		pole_edycji = new TextField("3");
-		pole_edycji.setBounds(400 - 95 - 25, 15 , 20, 20);
+		PED_ilosc_pol = new TextField("3");
+		PED_ilosc_pol.setBounds(400 - 95 - 25, 15 , 20, 20);
 		
-		pole_edycji2 = new TextField("3"); 
-		pole_edycji2.setBounds(400 - 95 - 25, 40 , 20, 20);
+		PED_warunek_zwyciestwa = new TextField("3"); 
+		PED_warunek_zwyciestwa.setBounds(400 - 95 - 25, 40 , 20, 20);
 		
 		label1 = new Label("Bok planszy w polach.");
 		label1.setBounds(80,15,200, 20);
@@ -40,7 +40,7 @@ public final class GUI_O_X implements ActionListener{// Komponenty interfejsu gr
 		label2.setBounds(80,40,200, 20);
 		label2.setBackground(Color.LIGHT_GRAY);
 		// Tablica zostanie dodana do widoku w panelu.
-		KOMPONENTY = new Component[] {res_but,sta_but, pole_edycji, pole_edycji2, label1, label2};	
+		KOMPONENTY = new Component[] {res_but,sta_but, PED_ilosc_pol, PED_warunek_zwyciestwa, label1, label2};	
 	}
 	
 	
@@ -58,9 +58,12 @@ public final class GUI_O_X implements ActionListener{// Komponenty interfejsu gr
 		}
 		if (source == sta_but) {
 			try {
-				panel.pole = Integer.parseInt(pole_edycji.getText());
-				panel.plansza.warunek = Integer.parseInt(pole_edycji2.getText());
-				if(panel.plansza.warunek > panel.pole) panel.plansza.warunek = panel.pole;
+				panel.pole = Integer.parseInt(PED_ilosc_pol.getText());
+				panel.warunek = Integer.parseInt(PED_warunek_zwyciestwa.getText());
+				if(panel.warunek > panel.pole) {
+					panel.warunek = panel.pole;
+					PED_warunek_zwyciestwa.setText(Integer.toString(panel.warunek));
+				}
 			}
 			catch (Exception ex) {
 			}

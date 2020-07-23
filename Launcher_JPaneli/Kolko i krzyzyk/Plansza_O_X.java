@@ -3,10 +3,11 @@ public final class Plansza_O_X { // Opis planszy z wewnêtrzn¹ klas¹ pole.
 	protected Pole_O_X[][] pola;
 	private int x, y;
 	protected boolean zwyciestwo = false;
-	protected int rozmiar_planszy, ilosc_pol, tura = 0,  warunek = 3;
+	protected int rozmiar_planszy, ilosc_pol, tura = 0,  warunek;
 	
-	public Plansza_O_X(int roz) {
+	public Plansza_O_X(int roz, int war) {
 		rozmiar_planszy = roz;
+		warunek = war;
 		ilosc_pol = rozmiar_planszy * rozmiar_planszy;
 		if(rozmiar_planszy > 1) {
 			pola = new Pole_O_X[rozmiar_planszy][rozmiar_planszy];			

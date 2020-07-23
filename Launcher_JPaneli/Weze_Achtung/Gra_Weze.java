@@ -65,7 +65,7 @@ public final class Gra_Weze {// Obs³uga gry Wê¿e i timera.
 		for(short i = 0; i<800; i++) {
 			for(short j = 0; j < 800; j++) {	
 				obraz_tla.setRGB(i, j, i*j*ziarno_koloru);
-			//	obraz.setRGB(i, j, MikserKolorow.miks(Color.BLACK, new Color(obraz_tla.getRGB(i, j)), 0.45f).getRGB());
+				obraz.setRGB(i, j, MikserKolorow.miks(Color.BLACK, new Color(obraz_tla.getRGB(i, j)), 0.45f).getRGB());
 				obraz_tla.setRGB(i, j, obraz.getRGB(i, j));
 			}
 		} 

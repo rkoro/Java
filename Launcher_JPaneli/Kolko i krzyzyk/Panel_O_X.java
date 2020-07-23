@@ -11,8 +11,9 @@ public final class Panel_O_X extends Panel {
 	private GUI_O_X gui;
 	protected Wygrana_O_X wygr;
 	protected Plansza_O_X plansza;
-	private Dimension	rozdzielczosc;
-	protected int bok, odstep, pole, rozmiar_planszy = -1;  
+	private Dimension rozdzielczosc;
+	protected int warunek, bok, odstep, pole, rozmiar_planszy = -1;  
+	
 	
 	protected Panel_O_X() {// Panel zawieraj¹cy grê "Kó³ko i Krzy¿yk".
 		setBackground(Color.GRAY);
@@ -29,7 +30,7 @@ public final class Panel_O_X extends Panel {
 	}
 	
 	protected void ustaw_Stale() {// Parametry rozmiarów.
-		plansza = new Plansza_O_X(rozmiar_planszy);	
+		plansza = new Plansza_O_X(rozmiar_planszy, warunek);	
 		odstep = (int) 50/(rozmiar_planszy);
 		bok = (int) 625/rozmiar_planszy - odstep;
 	}

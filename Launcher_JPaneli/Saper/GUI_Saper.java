@@ -15,7 +15,7 @@ public final class GUI_Saper implements ActionListener{// Elementy interfejsu gr
 	
 	GUI_Saper(Panel_Saper panel){ 
 		this.panel = panel;
-		 
+		
 	 	pole_szer = new TextField(Integer.toString(panel.szerokosc)); 
 		pole_szer.setBounds(10, 40, 30, 20);
 		
