@@ -1,2 +1,2 @@
-/Launcher_JPaneli/Pliki_Podstawowe
-\Launcher_JPaneli\Pliki_Podstawowe
+/Launcher_JPaneli/Pliki_Podstawowe/MAIN.java
+\Launcher_JPaneli\Pliki_Podstawowe\MAIN.java
